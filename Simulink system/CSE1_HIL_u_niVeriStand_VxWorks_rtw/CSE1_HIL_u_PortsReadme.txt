@@ -19,7 +19,11 @@
 <outport> Id = "7"  Name = "nu_dot/r_dot" Width = "1" DataType = "real_T" </outport>
 <outport> Id = "8"  Name = "nu_dot/u_dot" Width = "1" DataType = "real_T" </outport>
 <outport> Id = "9"  Name = "nu_dot/v_dot" Width = "1" DataType = "real_T" </outport>
-<outport> Id = "10"  Name = "tau/X" Width = "1" DataType = "real_T" </outport>
-<outport> Id = "11"  Name = "tau/Y" Width = "1" DataType = "real_T" </outport>
-<outport> Id = "12"  Name = "tau/N" Width = "1" DataType = "real_T" </outport>
+<outport> Id = "10"  Name = "nu_dot/zeroout" Width = "1" DataType = "real_T" </outport>
+<outport> Id = "11"  Name = "nu_dot/r_dot1" Width = "1" DataType = "real_T" </outport>
+<outport> Id = "12"  Name = "nu_dot/u_dot1" Width = "1" DataType = "real_T" </outport>
+<outport> Id = "13"  Name = "nu_dot/v_dot1" Width = "1" DataType = "real_T" </outport>
+<outport> Id = "14"  Name = "tau/X" Width = "1" DataType = "real_T" </outport>
+<outport> Id = "15"  Name = "tau/Y" Width = "1" DataType = "real_T" </outport>
+<outport> Id = "16"  Name = "tau/N" Width = "1" DataType = "real_T" </outport>
 </portlist>

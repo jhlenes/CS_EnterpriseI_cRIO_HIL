@@ -12,9 +12,9 @@
  *
  * Code generation for model "CSE1_HIL_u".
  *
- * Model version              : 1.32
+ * Model version              : 1.38
  * Simulink Coder version : 8.11 (R2016b) 25-Aug-2016
- * C source code generated on : Mon Jan 29 10:16:45 2018
+ * C source code generated on : Mon Feb 12 13:52:10 2018
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -347,6 +347,81 @@ P_CSE1_HIL_u_T CSE1_HIL_u_P = {
   0.0,                                 /* Expression: btype
                                         * Referenced by: '<S8>/v_dot'
                                         */
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<S8>/Constant'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<S8>/zeroout'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S8>/zeroout'
+                                        */
+  4.0,                                 /* Expression: portnum
+                                        * Referenced by: '<S8>/zeroout'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<S8>/zeroout'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<S8>/zeroout'
+                                        */
+  0.0,                                 /* Expression: btype
+                                        * Referenced by: '<S8>/zeroout'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<S8>/r_dot1'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S8>/r_dot1'
+                                        */
+  5.0,                                 /* Expression: portnum
+                                        * Referenced by: '<S8>/r_dot1'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<S8>/r_dot1'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<S8>/r_dot1'
+                                        */
+  0.0,                                 /* Expression: btype
+                                        * Referenced by: '<S8>/r_dot1'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<S8>/u_dot1'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S8>/u_dot1'
+                                        */
+  6.0,                                 /* Expression: portnum
+                                        * Referenced by: '<S8>/u_dot1'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<S8>/u_dot1'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<S8>/u_dot1'
+                                        */
+  0.0,                                 /* Expression: btype
+                                        * Referenced by: '<S8>/u_dot1'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<S8>/v_dot1'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S8>/v_dot1'
+                                        */
+  7.0,                                 /* Expression: portnum
+                                        * Referenced by: '<S8>/v_dot1'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<S8>/v_dot1'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<S8>/v_dot1'
+                                        */
+  0.0,                                 /* Expression: btype
+                                        * Referenced by: '<S8>/v_dot1'
+                                        */
   -1.0,                                /* Expression: width
                                         * Referenced by: '<S9>/X'
                                         */
@@ -461,9 +536,9 @@ P_CSE1_HIL_u_T CSE1_HIL_u_P = {
  * NI VeriStand Model Framework code generation
  *
  * Model : CSE1_HIL_u
- * Model version : 1.32
+ * Model version : 1.38
  * VeriStand Model Framework version : 2017.0.0.143 (2017)
- * Source generated on : Mon Jan 29 10:16:45 2018
+ * Source generated on : Mon Feb 12 13:52:09 2018
  *========================================================================*/
 #if defined VXWORKS || defined kNIOSLinux
 
@@ -532,6 +607,56 @@ NI_ParamSizeWidth P_CSE1_HIL_u_T_sizes[] DataSection(".NIVS.defaultparamsizes") 
   { sizeof(real_T), 1, 0 },
 
   { sizeof(real_T), 3, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
 
   { sizeof(real_T), 1, 0 },
 

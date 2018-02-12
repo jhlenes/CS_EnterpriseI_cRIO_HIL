@@ -10,7 +10,7 @@
 				<String>CSE1</String>
 			</Property>
 			<Property Name="Version">
-				<String>1.0.0.57</String>
+				<String>1.0.0.62</String>
 			</Property>
 			<Property Name="Creator">
 				<String />
@@ -31,7 +31,7 @@
 						<String>VxWorks</String>
 					</Property>
 					<Property Name="IP Address">
-						<String>192.168.0.72</String>
+						<String>192.168.0.73</String>
 					</Property>
 					<Property Name="Control Loop Processor">
 						<I32>-2</I32>
@@ -1649,10 +1649,10 @@
 									<Double>10000</Double>
 								</Property>
 								<Property Name="DLL Size">
-									<I32>190626</I32>
+									<I32>202518</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3582784703.9365697</Double>
+									<Double>3601283005.5130005</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -1685,7 +1685,7 @@
 									<Boolean>true</Boolean>
 								</Property>
 								<Property Name="MD5">
-									<String>2ac4145df9bea799498d82fca1193e1c</String>
+									<String>8a081dcf9a922bb899492841e397293a</String>
 								</Property>
 								<Property Name="NIVeriStandServer Port">
 									<U32>6012</U32>
@@ -1699,7 +1699,7 @@
 										<ForceDownload>false</ForceDownload>
 										<RTDestination>c:\ni-rt\system\u2pwm.out</RTDestination>
 										<SupportedTarget>VxWorks</SupportedTarget>
-										<MD5>2ac4145df9bea799498d82fca1193e1c</MD5>
+										<MD5>8a081dcf9a922bb899492841e397293a</MD5>
 									</DependentFile>
 								</Property>
 								<Property Name="GlobalParameterScopes">
@@ -2468,6 +2468,116 @@
 										</DefaultValue>
 									</Channel>
 								</Section>
+								<Section Name="to HIL subsystem" TypeGUID="cbfdde93-6581-4b7c-83b8-e88484f25b2e">
+									<Description />
+									<Properties />
+									<Errors />
+									<Channel Name="u_BT_HIL" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
+										<Description />
+										<Properties>
+											<Property Name="Model Path">
+												<String>to HIL subsystem/u_BT_HIL</String>
+											</Property>
+											<Property Name="Index">
+												<I32>38</I32>
+											</Property>
+										</Properties>
+										<Errors />
+										<DefaultValue>
+											<Elem>0</Elem>
+										</DefaultValue>
+									</Channel>
+									<Channel Name="u_VSP1_HIL" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
+										<Description />
+										<Properties>
+											<Property Name="Model Path">
+												<String>to HIL subsystem/u_VSP1_HIL</String>
+											</Property>
+											<Property Name="Index">
+												<I32>39</I32>
+											</Property>
+										</Properties>
+										<Errors />
+										<DefaultValue>
+											<Elem>0</Elem>
+										</DefaultValue>
+									</Channel>
+									<Channel Name="u_VSP2_HIL" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
+										<Description />
+										<Properties>
+											<Property Name="Model Path">
+												<String>to HIL subsystem/u_VSP2_HIL</String>
+											</Property>
+											<Property Name="Index">
+												<I32>40</I32>
+											</Property>
+										</Properties>
+										<Errors />
+										<DefaultValue>
+											<Elem>0</Elem>
+										</DefaultValue>
+									</Channel>
+									<Channel Name="alpha_VSP1_HIL" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
+										<Description />
+										<Properties>
+											<Property Name="Model Path">
+												<String>to HIL subsystem/alpha_VSP1_HIL</String>
+											</Property>
+											<Property Name="Index">
+												<I32>41</I32>
+											</Property>
+										</Properties>
+										<Errors />
+										<DefaultValue>
+											<Elem>0</Elem>
+										</DefaultValue>
+									</Channel>
+									<Channel Name="alpha_VSP2_HIL" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
+										<Description />
+										<Properties>
+											<Property Name="Model Path">
+												<String>to HIL subsystem/alpha_VSP2_HIL</String>
+											</Property>
+											<Property Name="Index">
+												<I32>42</I32>
+											</Property>
+										</Properties>
+										<Errors />
+										<DefaultValue>
+											<Elem>0</Elem>
+										</DefaultValue>
+									</Channel>
+									<Channel Name="omega_VSP1_HIL" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
+										<Description />
+										<Properties>
+											<Property Name="Model Path">
+												<String>to HIL subsystem/omega_VSP1_HIL</String>
+											</Property>
+											<Property Name="Index">
+												<I32>43</I32>
+											</Property>
+										</Properties>
+										<Errors />
+										<DefaultValue>
+											<Elem>0</Elem>
+										</DefaultValue>
+									</Channel>
+									<Channel Name="omega_VSP2_HIL" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
+										<Description />
+										<Properties>
+											<Property Name="Model Path">
+												<String>to HIL subsystem/omega_VSP2_HIL</String>
+											</Property>
+											<Property Name="Index">
+												<I32>44</I32>
+											</Property>
+										</Properties>
+										<Errors />
+										<DefaultValue>
+											<Elem>0</Elem>
+										</DefaultValue>
+									</Channel>
+								</Section>
 								<Channel Name="control input u exceeds bounds" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
 									<Description />
 									<Properties>
@@ -2644,6 +2754,9 @@
 											<Property Name="Index">
 												<I32>6</I32>
 											</Property>
+											<Property Name="DataSource">
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/eta/x" />
+											</Property>
 										</Properties>
 										<Errors />
 										<DefaultValue>
@@ -2659,6 +2772,9 @@
 											<Property Name="Index">
 												<I32>7</I32>
 											</Property>
+											<Property Name="DataSource">
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/eta/y" />
+											</Property>
 										</Properties>
 										<Errors />
 										<DefaultValue>
@@ -2673,6 +2789,9 @@
 											</Property>
 											<Property Name="Index">
 												<I32>8</I32>
+											</Property>
+											<Property Name="DataSource">
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/eta/psi" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -2695,7 +2814,7 @@
 												<I32>0</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Hardware/Chassis/FPGA/RIO0/Input/IMU/Acc_x" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/nu_dot/u_dot" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -2713,7 +2832,7 @@
 												<I32>1</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Hardware/Chassis/FPGA/RIO0/Input/IMU/Acc_y" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/nu_dot/v_dot" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -2731,7 +2850,7 @@
 												<I32>2</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Hardware/Chassis/FPGA/RIO0/Input/IMU/Acc_z" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/nu_dot/zeroout" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -2749,7 +2868,7 @@
 												<I32>3</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Hardware/Chassis/FPGA/RIO0/Input/IMU/Gyro_x" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/nu_dot/zeroout" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -2767,7 +2886,7 @@
 												<I32>4</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Hardware/Chassis/FPGA/RIO0/Input/IMU/Gyro_y" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/nu_dot/zeroout" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -2785,7 +2904,7 @@
 												<I32>5</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Hardware/Chassis/FPGA/RIO0/Input/IMU/Gyro_z" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/nu/r" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -3370,6 +3489,9 @@
 											<Property Name="Index">
 												<I32>9</I32>
 											</Property>
+											<Property Name="DataSource">
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/eta/x" />
+											</Property>
 										</Properties>
 										<Errors />
 										<DefaultValue>
@@ -3385,6 +3507,9 @@
 											<Property Name="Index">
 												<I32>10</I32>
 											</Property>
+											<Property Name="DataSource">
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/eta/y" />
+											</Property>
 										</Properties>
 										<Errors />
 										<DefaultValue>
@@ -3399,6 +3524,9 @@
 											</Property>
 											<Property Name="Index">
 												<I32>11</I32>
+											</Property>
+											<Property Name="DataSource">
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/eta/psi" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -3421,7 +3549,7 @@
 												<I32>23</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Hardware/Chassis/FPGA/RIO0/Input/IMU/Acc_x" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/nu_dot/u_dot" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -3439,7 +3567,7 @@
 												<I32>24</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Hardware/Chassis/FPGA/RIO0/Input/IMU/Acc_y" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/nu_dot/v_dot" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -3457,7 +3585,7 @@
 												<I32>25</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Hardware/Chassis/FPGA/RIO0/Input/IMU/Acc_z" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/nu_dot/zeroout" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -3475,7 +3603,7 @@
 												<I32>26</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Hardware/Chassis/FPGA/RIO0/Input/IMU/Gyro_x" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/nu_dot/zeroout" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -3493,7 +3621,7 @@
 												<I32>27</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Hardware/Chassis/FPGA/RIO0/Input/IMU/Gyro_y" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/nu_dot/zeroout" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -3511,7 +3639,7 @@
 												<I32>28</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Hardware/Chassis/FPGA/RIO0/Input/IMU/Gyro_z" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_u/Outports/nu/r" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -4149,10 +4277,10 @@
 									<Double>10000</Double>
 								</Property>
 								<Property Name="DLL Size">
-									<I32>161409</I32>
+									<I32>167592</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3600062251.8190145</Double>
+									<Double>3601284783.8484492</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -4185,7 +4313,7 @@
 									<Boolean>true</Boolean>
 								</Property>
 								<Property Name="MD5">
-									<String>0f3f388838f7789b052660896604a6ad</String>
+									<String>d3a5c926b4fe9bcfa8249841162634fb</String>
 								</Property>
 								<Property Name="NIVeriStandServer Port">
 									<U32>6012</U32>
@@ -4199,7 +4327,7 @@
 										<ForceDownload>false</ForceDownload>
 										<RTDestination>c:\ni-rt\system\CSE1_HIL_u.out</RTDestination>
 										<SupportedTarget>VxWorks</SupportedTarget>
-										<MD5>0f3f388838f7789b052660896604a6ad</MD5>
+										<MD5>d3a5c926b4fe9bcfa8249841162634fb</MD5>
 									</DependentFile>
 								</Property>
 								<Property Name="GlobalParameterScopes">
@@ -4292,7 +4420,7 @@
 												<I32>1</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/ctrl_sixaxis2thruster/Outports/u_BT" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/u2pwm/Outports/to HIL subsystem/u_BT_HIL" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -4310,7 +4438,7 @@
 												<I32>2</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/ctrl_sixaxis2thruster/Outports/u_VSP1" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/u2pwm/Outports/to HIL subsystem/u_VSP1_HIL" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -4328,7 +4456,7 @@
 												<I32>3</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/ctrl_sixaxis2thruster/Outports/u_VSP2" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/u2pwm/Outports/to HIL subsystem/u_VSP2_HIL" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -4346,7 +4474,7 @@
 												<I32>4</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/ctrl_sixaxis2thruster/Outports/alpha_VSP1" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/u2pwm/Outports/to HIL subsystem/alpha_VSP1_HIL" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -4364,7 +4492,7 @@
 												<I32>5</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/ctrl_sixaxis2thruster/Outports/alpha_VSP2" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/u2pwm/Outports/to HIL subsystem/alpha_VSP2_HIL" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -4382,7 +4510,7 @@
 												<I32>6</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/ctrl_sixaxis2thruster/Outports/omega_VSP1" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/u2pwm/Outports/to HIL subsystem/omega_VSP1_HIL" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -4400,7 +4528,7 @@
 												<I32>7</I32>
 											</Property>
 											<Property Name="DataSource">
-												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/ctrl_sixaxis2thruster/Outports/omega_VSP2" />
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/u2pwm/Outports/to HIL subsystem/omega_VSP2_HIL" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -4628,6 +4756,66 @@
 											<Elem>0</Elem>
 										</DefaultValue>
 									</Channel>
+									<Channel Name="zeroout" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
+										<Description />
+										<Properties>
+											<Property Name="Model Path">
+												<String>nu_dot/zeroout</String>
+											</Property>
+											<Property Name="Index">
+												<I32>20</I32>
+											</Property>
+										</Properties>
+										<Errors />
+										<DefaultValue>
+											<Elem>0</Elem>
+										</DefaultValue>
+									</Channel>
+									<Channel Name="r_dot1" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
+										<Description />
+										<Properties>
+											<Property Name="Model Path">
+												<String>nu_dot/r_dot1</String>
+											</Property>
+											<Property Name="Index">
+												<I32>21</I32>
+											</Property>
+										</Properties>
+										<Errors />
+										<DefaultValue>
+											<Elem>0</Elem>
+										</DefaultValue>
+									</Channel>
+									<Channel Name="u_dot1" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
+										<Description />
+										<Properties>
+											<Property Name="Model Path">
+												<String>nu_dot/u_dot1</String>
+											</Property>
+											<Property Name="Index">
+												<I32>22</I32>
+											</Property>
+										</Properties>
+										<Errors />
+										<DefaultValue>
+											<Elem>0</Elem>
+										</DefaultValue>
+									</Channel>
+									<Channel Name="v_dot1" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
+										<Description />
+										<Properties>
+											<Property Name="Model Path">
+												<String>nu_dot/v_dot1</String>
+											</Property>
+											<Property Name="Index">
+												<I32>23</I32>
+											</Property>
+										</Properties>
+										<Errors />
+										<DefaultValue>
+											<Elem>0</Elem>
+										</DefaultValue>
+									</Channel>
 								</Section>
 								<Section Name="tau" TypeGUID="cbfdde93-6581-4b7c-83b8-e88484f25b2e">
 									<Description />
@@ -4640,7 +4828,7 @@
 												<String>tau/X</String>
 											</Property>
 											<Property Name="Index">
-												<I32>20</I32>
+												<I32>24</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -4655,7 +4843,7 @@
 												<String>tau/Y</String>
 											</Property>
 											<Property Name="Index">
-												<I32>21</I32>
+												<I32>25</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -4670,7 +4858,7 @@
 												<String>tau/N</String>
 											</Property>
 											<Property Name="Index">
-												<I32>22</I32>
+												<I32>26</I32>
 											</Property>
 										</Properties>
 										<Errors />

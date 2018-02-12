@@ -7,9 +7,9 @@
  *
  * Code generation for model "CSE1_HIL_u".
  *
- * Model version              : 1.32
+ * Model version              : 1.38
  * Simulink Coder version : 8.11 (R2016b) 25-Aug-2016
- * C source code generated on : Mon Jan 29 10:16:45 2018
+ * C source code generated on : Mon Feb 12 13:52:10 2018
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -826,6 +826,12 @@
 /* Definition for use in the target main file */
 #define CSE1_HIL_u_rtModel             RT_MODEL_CSE1_HIL_u_T
 
+/* Block signals for system '<S1>/VSP' */
+typedef struct {
+  real_T F_x;                          /* '<S1>/VSP' */
+  real_T F_y;                          /* '<S1>/VSP' */
+} B_VSP_CSE1_HIL_u_T;
+
 /* Block signals (auto storage) */
 typedef struct {
   real_T integrator_reset;             /* '<Root>/integrator_reset' */
@@ -849,6 +855,8 @@ typedef struct {
   real_T X;                            /* '<Root>/T Thruster configuration matrix' */
   real_T Y;                            /* '<Root>/T Thruster configuration matrix' */
   real_T N;                            /* '<Root>/T Thruster configuration matrix' */
+  B_VSP_CSE1_HIL_u_T sf_VSP1;          /* '<S1>/VSP1' */
+  B_VSP_CSE1_HIL_u_T sf_VSP;           /* '<S1>/VSP' */
 } B_CSE1_HIL_u_T;
 
 /* Block states (auto storage) for system '<Root>' */
@@ -873,6 +881,10 @@ typedef struct {
   real_T r_dot_DWORK1;                 /* '<S8>/r_dot' */
   real_T u_dot_DWORK1;                 /* '<S8>/u_dot' */
   real_T v_dot_DWORK1;                 /* '<S8>/v_dot' */
+  real_T zeroout_DWORK1;               /* '<S8>/zeroout' */
+  real_T r_dot1_DWORK1;                /* '<S8>/r_dot1' */
+  real_T u_dot1_DWORK1;                /* '<S8>/u_dot1' */
+  real_T v_dot1_DWORK1;                /* '<S8>/v_dot1' */
   real_T X_DWORK1;                     /* '<S9>/X' */
   real_T Y_DWORK1;                     /* '<S9>/Y' */
   real_T N_DWORK1;                     /* '<S9>/N' */
@@ -897,6 +909,10 @@ typedef struct {
   uint8_T r_dot_DWORK2[11];            /* '<S8>/r_dot' */
   uint8_T u_dot_DWORK2[11];            /* '<S8>/u_dot' */
   uint8_T v_dot_DWORK2[11];            /* '<S8>/v_dot' */
+  uint8_T zeroout_DWORK2[11];          /* '<S8>/zeroout' */
+  uint8_T r_dot1_DWORK2[11];           /* '<S8>/r_dot1' */
+  uint8_T u_dot1_DWORK2[11];           /* '<S8>/u_dot1' */
+  uint8_T v_dot1_DWORK2[11];           /* '<S8>/v_dot1' */
   uint8_T X_DWORK2[11];                /* '<S9>/X' */
   uint8_T Y_DWORK2[11];                /* '<S9>/Y' */
   uint8_T N_DWORK2[11];                /* '<S9>/N' */
@@ -1276,6 +1292,81 @@ struct P_CSE1_HIL_u_T_ {
   real_T v_dot_P6;                     /* Expression: btype
                                         * Referenced by: '<S8>/v_dot'
                                         */
+  real_T Constant_Value;               /* Expression: 0
+                                        * Referenced by: '<S8>/Constant'
+                                        */
+  real_T zeroout_P1;                   /* Expression: width
+                                        * Referenced by: '<S8>/zeroout'
+                                        */
+  real_T zeroout_P2;                   /* Expression: dtype
+                                        * Referenced by: '<S8>/zeroout'
+                                        */
+  real_T zeroout_P3;                   /* Expression: portnum
+                                        * Referenced by: '<S8>/zeroout'
+                                        */
+  real_T zeroout_P4;                   /* Expression: stime
+                                        * Referenced by: '<S8>/zeroout'
+                                        */
+  real_T zeroout_P5;                   /* Expression: stype
+                                        * Referenced by: '<S8>/zeroout'
+                                        */
+  real_T zeroout_P6;                   /* Expression: btype
+                                        * Referenced by: '<S8>/zeroout'
+                                        */
+  real_T r_dot1_P1;                    /* Expression: width
+                                        * Referenced by: '<S8>/r_dot1'
+                                        */
+  real_T r_dot1_P2;                    /* Expression: dtype
+                                        * Referenced by: '<S8>/r_dot1'
+                                        */
+  real_T r_dot1_P3;                    /* Expression: portnum
+                                        * Referenced by: '<S8>/r_dot1'
+                                        */
+  real_T r_dot1_P4;                    /* Expression: stime
+                                        * Referenced by: '<S8>/r_dot1'
+                                        */
+  real_T r_dot1_P5;                    /* Expression: stype
+                                        * Referenced by: '<S8>/r_dot1'
+                                        */
+  real_T r_dot1_P6;                    /* Expression: btype
+                                        * Referenced by: '<S8>/r_dot1'
+                                        */
+  real_T u_dot1_P1;                    /* Expression: width
+                                        * Referenced by: '<S8>/u_dot1'
+                                        */
+  real_T u_dot1_P2;                    /* Expression: dtype
+                                        * Referenced by: '<S8>/u_dot1'
+                                        */
+  real_T u_dot1_P3;                    /* Expression: portnum
+                                        * Referenced by: '<S8>/u_dot1'
+                                        */
+  real_T u_dot1_P4;                    /* Expression: stime
+                                        * Referenced by: '<S8>/u_dot1'
+                                        */
+  real_T u_dot1_P5;                    /* Expression: stype
+                                        * Referenced by: '<S8>/u_dot1'
+                                        */
+  real_T u_dot1_P6;                    /* Expression: btype
+                                        * Referenced by: '<S8>/u_dot1'
+                                        */
+  real_T v_dot1_P1;                    /* Expression: width
+                                        * Referenced by: '<S8>/v_dot1'
+                                        */
+  real_T v_dot1_P2;                    /* Expression: dtype
+                                        * Referenced by: '<S8>/v_dot1'
+                                        */
+  real_T v_dot1_P3;                    /* Expression: portnum
+                                        * Referenced by: '<S8>/v_dot1'
+                                        */
+  real_T v_dot1_P4;                    /* Expression: stime
+                                        * Referenced by: '<S8>/v_dot1'
+                                        */
+  real_T v_dot1_P5;                    /* Expression: stype
+                                        * Referenced by: '<S8>/v_dot1'
+                                        */
+  real_T v_dot1_P6;                    /* Expression: btype
+                                        * Referenced by: '<S8>/v_dot1'
+                                        */
   real_T X_P1;                         /* Expression: width
                                         * Referenced by: '<S9>/X'
                                         */
@@ -1551,6 +1642,7 @@ extern RT_MODEL_CSE1_HIL_u_T *const CSE1_HIL_u_M;
  * '<S10>'  : 'CSE1_HIL_u/u'
  * '<S11>'  : 'CSE1_HIL_u/B Command to force mapping/Bow thruster'
  * '<S12>'  : 'CSE1_HIL_u/B Command to force mapping/VSP'
+ * '<S13>'  : 'CSE1_HIL_u/B Command to force mapping/VSP1'
  */
 #endif                                 /* RTW_HEADER_CSE1_HIL_u_h_ */
 
@@ -1558,9 +1650,9 @@ extern RT_MODEL_CSE1_HIL_u_T *const CSE1_HIL_u_M;
  * NI VeriStand Model Framework code generation
  *
  * Model : CSE1_HIL_u
- * Model version : 1.32
+ * Model version : 1.38
  * VeriStand Model Framework version : 2017.0.0.143 (2017)
- * Source generated on : Mon Jan 29 10:16:45 2018
+ * Source generated on : Mon Feb 12 13:52:09 2018
  *========================================================================*/
 #if !defined(NI_HEADER_CSE1_HIL_u_h_)
 #define NI_HEADER_CSE1_HIL_u_h_

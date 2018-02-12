@@ -28,4 +28,8 @@
 <signal> Id = "26" Name = "cse1_hil_u/T Thruster configuration matrix" SignalName = "" PortNum = "0" Width = "1" DataType = "real_T" </signal>
 <signal> Id = "27" Name = "cse1_hil_u/T Thruster configuration matrix" SignalName = "" PortNum = "1" Width = "1" DataType = "real_T" </signal>
 <signal> Id = "28" Name = "cse1_hil_u/T Thruster configuration matrix" SignalName = "" PortNum = "2" Width = "1" DataType = "real_T" </signal>
+<signal> Id = "29" Name = "cse1_hil_u/B Command to force mapping/VSP1" SignalName = "" PortNum = "0" Width = "1" DataType = "real_T" </signal>
+<signal> Id = "30" Name = "cse1_hil_u/B Command to force mapping/VSP1" SignalName = "" PortNum = "1" Width = "1" DataType = "real_T" </signal>
+<signal> Id = "31" Name = "cse1_hil_u/B Command to force mapping/VSP" SignalName = "" PortNum = "0" Width = "1" DataType = "real_T" </signal>
+<signal> Id = "32" Name = "cse1_hil_u/B Command to force mapping/VSP" SignalName = "" PortNum = "1" Width = "1" DataType = "real_T" </signal>
 </signallist>

@@ -7,9 +7,9 @@
  *
  * Code generation for model "CSE1_HIL_u".
  *
- * Model version              : 1.32
+ * Model version              : 1.38
  * Simulink Coder version : 8.11 (R2016b) 25-Aug-2016
- * C source code generated on : Mon Jan 29 10:16:45 2018
+ * C source code generated on : Mon Feb 12 13:52:10 2018
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping

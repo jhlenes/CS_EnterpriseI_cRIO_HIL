@@ -2,9 +2,9 @@
  * NI VeriStand Model Framework code generation
  *
  * Model : CSE1_HIL_u
- * Model version : 1.32
+ * Model version : 1.38
  * VeriStand Model Framework version : 2017.0.0.143 (2017)
- * Source generated on : Mon Jan 29 10:16:45 2018
+ * Source generated on : Mon Feb 12 13:52:09 2018
  *========================================================================*/
 
 /*

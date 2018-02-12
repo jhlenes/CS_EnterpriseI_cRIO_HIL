@@ -7,9 +7,9 @@
  *
  * Code generation for model "CSE1_HIL_u".
  *
- * Model version              : 1.32
+ * Model version              : 1.38
  * Simulink Coder version : 8.11 (R2016b) 25-Aug-2016
- * C source code generated on : Mon Jan 29 10:16:45 2018
+ * C source code generated on : Mon Feb 12 13:52:10 2018
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -107,6 +107,68 @@ static void rt_ertODEUpdateContinuousStates(RTWSolverInfo *si )
   rtsiSetSimTimeStep(si,MAJOR_TIME_STEP);
 }
 
+/*
+ * Output and update for atomic system:
+ *    '<S1>/VSP'
+ *    '<S1>/VSP1'
+ */
+void CSE1_HIL_u_VSP(real_T rtu_alpha, real_T rtu_u_VSP, B_VSP_CSE1_HIL_u_T
+                    *localB)
+{
+  /* MATLAB Function 'B Command to force mapping/VSP': '<S12>:1' */
+  /*  Calculating the force in x-direction */
+  /* '<S12>:1:4' */
+  /* '<S12>:1:5' */
+  /* '<S12>:1:6' */
+  /* '<S12>:1:7' */
+  /* '<S12>:1:8' */
+  /* '<S12>:1:9' */
+  /* '<S12>:1:10' */
+  /* '<S12>:1:11' */
+  /* '<S12>:1:12' */
+  /* '<S12>:1:13' */
+  /* '<S12>:1:14' */
+  /* '<S12>:1:15' */
+  /* '<S12>:1:16' */
+  /* '<S12>:1:17' */
+  /* '<S12>:1:18' */
+  /* '<S12>:1:19' */
+  /* '<S12>:1:20' */
+  /* '<S12>:1:21' */
+  /* '<S12>:1:22' */
+  localB->F_x = (((((sin(1.001 * rtu_alpha + 1.564) * 1.107 + sin(0.1397 *
+    rtu_alpha + -1.599) * 0.3471) + sin(1.993 * rtu_alpha + 1.886) * 0.1558) +
+                   sin(0.218 * rtu_alpha + 1.513) * 0.1599) + sin(2.986 *
+    rtu_alpha + -1.601) * 0.08237) + sin(3.964 * rtu_alpha + 1.738) * 0.04641) *
+    rtu_u_VSP;
+
+  /*  Calculating the force in y-direction */
+  /* '<S12>:1:29' */
+  /* '<S12>:1:30' */
+  /* '<S12>:1:31' */
+  /* '<S12>:1:32' */
+  /* '<S12>:1:33' */
+  /* '<S12>:1:34' */
+  /* '<S12>:1:35' */
+  /* '<S12>:1:36' */
+  /* '<S12>:1:37' */
+  /* '<S12>:1:38' */
+  /* '<S12>:1:39' */
+  /* '<S12>:1:40' */
+  /* '<S12>:1:41' */
+  /* '<S12>:1:42' */
+  /* '<S12>:1:43' */
+  /* '<S12>:1:44' */
+  /* '<S12>:1:45' */
+  /* '<S12>:1:46' */
+  /* '<S12>:1:47' */
+  localB->F_y = (((((sin(1.001 * rtu_alpha + 0.01605) * 0.7936 + sin(1.997 *
+    rtu_alpha + 0.03229) * 0.2112) + sin(2.991 * rtu_alpha + 2.986) * 0.07608) +
+                   sin(3.999 * rtu_alpha + -0.8668) * 0.04817) + sin(4.904 *
+    rtu_alpha + -2.622) * 0.01757) + sin(5.068 * rtu_alpha + 0.2548) * -0.02089)
+    * rtu_u_VSP;
+}
+
 /* Model output function */
 void CSE1_HIL_u_output(void)
 {
@@ -194,9 +256,6 @@ void CSE1_HIL_u_output(void)
   if (rtmIsMajorTimeStep(CSE1_HIL_u_M)) {
   }
 
-  if (rtmIsMajorTimeStep(CSE1_HIL_u_M)) {
-  }
-
   /* MATLAB Function: '<S1>/Bow thruster' */
   /* MATLAB Function 'B Command to force mapping/Bow thruster': '<S11>:1' */
   /* '<S11>:1:3' */
@@ -224,73 +283,31 @@ void CSE1_HIL_u_output(void)
     b_y0 = 0.0;
   }
 
-  /* MATLAB Function: '<Root>/T Thruster configuration matrix' incorporates:
-   *  MATLAB Function: '<S1>/Bow thruster'
-   *  MATLAB Function: '<S1>/VSP'
-   */
+  /* MATLAB Function: '<S1>/VSP' */
   /*  Thruster losses due to forward speed */
   /* '<S11>:1:21' */
   /* '<S11>:1:22' */
   /* '<S11>:1:23' */
   /* '<S11>:1:24' */
   /* '<S11>:1:25' */
-  /* MATLAB Function 'B Command to force mapping/VSP': '<S12>:1' */
-  /*  Calculating the force in x-direction */
-  /* '<S12>:1:4' */
-  /* '<S12>:1:5' */
-  /* '<S12>:1:6' */
-  /* '<S12>:1:7' */
-  /* '<S12>:1:8' */
-  /* '<S12>:1:9' */
-  /* '<S12>:1:10' */
-  /* '<S12>:1:11' */
-  /* '<S12>:1:12' */
-  /* '<S12>:1:13' */
-  /* '<S12>:1:14' */
-  /* '<S12>:1:15' */
-  /* '<S12>:1:16' */
-  /* '<S12>:1:17' */
-  /* '<S12>:1:18' */
-  /* '<S12>:1:19' */
-  /* '<S12>:1:20' */
-  /* '<S12>:1:21' */
-  /* '<S12>:1:22' */
-  /*  Calculating the force in y-direction */
-  /* '<S12>:1:29' */
-  /* '<S12>:1:30' */
-  /* '<S12>:1:31' */
-  /* '<S12>:1:32' */
-  /* '<S12>:1:33' */
-  /* '<S12>:1:34' */
-  /* '<S12>:1:35' */
-  /* '<S12>:1:36' */
-  /* '<S12>:1:37' */
-  /* '<S12>:1:38' */
-  /* '<S12>:1:39' */
-  /* '<S12>:1:40' */
-  /* '<S12>:1:41' */
-  /* '<S12>:1:42' */
-  /* '<S12>:1:43' */
-  /* '<S12>:1:44' */
-  /* '<S12>:1:45' */
-  /* '<S12>:1:46' */
-  /* '<S12>:1:47' */
+  CSE1_HIL_u_VSP(CSE1_HIL_u_B.alpha_VSP1, CSE1_HIL_u_B.u_VSP1,
+                 &CSE1_HIL_u_B.sf_VSP);
+
+  /* MATLAB Function: '<S1>/VSP1' */
+  CSE1_HIL_u_VSP(CSE1_HIL_u_B.alpha_VSP2, CSE1_HIL_u_B.u_VSP2,
+                 &CSE1_HIL_u_B.sf_VSP1);
+
+  /* MATLAB Function: '<Root>/T Thruster configuration matrix' incorporates:
+   *  MATLAB Function: '<S1>/Bow thruster'
+   *  Sum: '<S1>/Sum'
+   *  Sum: '<S1>/Sum1'
+   */
   /* MATLAB Function 'T Thruster configuration matrix': '<S2>:1' */
   /* '<S2>:1:15' */
   /* '<S2>:1:7' */
   /* '<S2>:1:15' */
-  c_23 = (((((sin(1.001 * CSE1_HIL_u_B.alpha_VSP1 + 1.564) * 1.107 + sin(0.1397 *
-    CSE1_HIL_u_B.alpha_VSP1 + -1.599) * 0.3471) + sin(1.993 *
-              CSE1_HIL_u_B.alpha_VSP1 + 1.886) * 0.1558) + sin(0.218 *
-             CSE1_HIL_u_B.alpha_VSP1 + 1.513) * 0.1599) + sin(2.986 *
-            CSE1_HIL_u_B.alpha_VSP1 + -1.601) * 0.08237) + sin(3.964 *
-           CSE1_HIL_u_B.alpha_VSP1 + 1.738) * 0.04641) * CSE1_HIL_u_B.u_VSP1;
-  tmp_3 = (((((sin(1.001 * CSE1_HIL_u_B.alpha_VSP1 + 0.01605) * 0.7936 + sin
-               (1.997 * CSE1_HIL_u_B.alpha_VSP1 + 0.03229) * 0.2112) + sin(2.991
-    * CSE1_HIL_u_B.alpha_VSP1 + 2.986) * 0.07608) + sin(3.999 *
-              CSE1_HIL_u_B.alpha_VSP1 + -0.8668) * 0.04817) + sin(4.904 *
-             CSE1_HIL_u_B.alpha_VSP1 + -2.622) * 0.01757) + sin(5.068 *
-            CSE1_HIL_u_B.alpha_VSP1 + 0.2548) * -0.02089) * CSE1_HIL_u_B.u_VSP1;
+  c_23 = CSE1_HIL_u_B.sf_VSP.F_x + CSE1_HIL_u_B.sf_VSP1.F_x;
+  tmp_3 = CSE1_HIL_u_B.sf_VSP.F_y + CSE1_HIL_u_B.sf_VSP1.F_y;
   b_y0 = (atan(-10.22 * CSE1_HIL_u_B.Velocity[0] + 2.947) * 0.3075 + 0.7561) *
     b_y0 / 1.1385;
   for (i = 0; i < 3; i++) {
@@ -425,6 +442,9 @@ void CSE1_HIL_u_output(void)
   CSE1_HIL_u_B.nu_dot[0] /= 16.11;
 
   /* End of MATLAB Function: '<Root>/kinetics' */
+  if (rtmIsMajorTimeStep(CSE1_HIL_u_M)) {
+  }
+
   if (rtmIsMajorTimeStep(CSE1_HIL_u_M)) {
   }
 
@@ -770,9 +790,9 @@ RT_MODEL_CSE1_HIL_u_T *CSE1_HIL_u(void)
   CSE1_HIL_u_M->Sizes.numU = (0);      /* Number of model inputs */
   CSE1_HIL_u_M->Sizes.sysDirFeedThru = (0);/* The model is not direct feedthrough */
   CSE1_HIL_u_M->Sizes.numSampTimes = (2);/* Number of sample times */
-  CSE1_HIL_u_M->Sizes.numBlocks = (39);/* Number of blocks */
-  CSE1_HIL_u_M->Sizes.numBlockIO = (21);/* Number of block outputs */
-  CSE1_HIL_u_M->Sizes.numBlockPrms = (144);/* Sum of parameter "widths" */
+  CSE1_HIL_u_M->Sizes.numBlocks = (47);/* Number of blocks */
+  CSE1_HIL_u_M->Sizes.numBlockIO = (25);/* Number of block outputs */
+  CSE1_HIL_u_M->Sizes.numBlockPrms = (169);/* Sum of parameter "widths" */
   return CSE1_HIL_u_M;
 }
 
@@ -784,9 +804,9 @@ RT_MODEL_CSE1_HIL_u_T *CSE1_HIL_u(void)
  * NI VeriStand Model Framework code generation
  *
  * Model : CSE1_HIL_u
- * Model version : 1.32
+ * Model version : 1.38
  * VeriStand Model Framework version : 2017.0.0.143 (2017)
- * Source generated on : Mon Jan 29 10:16:45 2018
+ * Source generated on : Mon Feb 12 13:52:09 2018
  *========================================================================*/
 
 /* This file contains automatically generated code for functions
@@ -872,17 +892,11 @@ double NIRT_GetValueByDataType(void* ptr, int32_t subindex, int32_t type,
    case 19:
     return NIRT_GetValueByDataType(ptr,subindex,3,Complex);
 
-   case 20:
+   case 22:
     return NIRT_GetValueByDataType(ptr,subindex,0,Complex);
 
-   case 21:
-    return NIRT_GetValueByDataType(ptr,subindex,8,Complex);
-
-   case 22:
-    return (( double *)ptr)[subindex];
-
    case 23:
-    return (( double *)ptr)[subindex];
+    return NIRT_GetValueByDataType(ptr,subindex,8,Complex);
 
    case 24:
     return (( double *)ptr)[subindex];
@@ -900,9 +914,18 @@ double NIRT_GetValueByDataType(void* ptr, int32_t subindex, int32_t type,
     return (( double *)ptr)[subindex];
 
    case 29:
-    return NIRT_GetValueByDataType(ptr,subindex,0,Complex);
+    return (( double *)ptr)[subindex];
 
    case 30:
+    return (( double *)ptr)[subindex];
+
+   case 31:
+    return (( double *)ptr)[subindex];
+
+   case 32:
+    return NIRT_GetValueByDataType(ptr,subindex,0,Complex);
+
+   case 33:
     return NIRT_GetValueByDataType(ptr,subindex,0,Complex);
   }
 
@@ -996,21 +1019,13 @@ int32_t NIRT_SetValueByDataType(void* ptr, int32_t subindex, double value,
     //Type is matrix. Call SetValueByDataType on its contained type
     return NIRT_SetValueByDataType(ptr, subindex, value, 3, Complex);
 
-   case 20:
-    //Type is matrix. Call SetValueByDataType on its contained type
-    return NIRT_SetValueByDataType(ptr, subindex, value, 0, Complex);
-
-   case 21:
-    //Type is matrix. Call SetValueByDataType on its contained type
-    return NIRT_SetValueByDataType(ptr, subindex, value, 8, Complex);
-
    case 22:
-    //Type is struct. Call SetValueByDataType on its contained type
+    //Type is matrix. Call SetValueByDataType on its contained type
     return NIRT_SetValueByDataType(ptr, subindex, value, 0, Complex);
 
    case 23:
-    //Type is struct. Call SetValueByDataType on its contained type
-    return NIRT_SetValueByDataType(ptr, subindex, value, 0, Complex);
+    //Type is matrix. Call SetValueByDataType on its contained type
+    return NIRT_SetValueByDataType(ptr, subindex, value, 8, Complex);
 
    case 24:
     //Type is struct. Call SetValueByDataType on its contained type
@@ -1033,10 +1048,22 @@ int32_t NIRT_SetValueByDataType(void* ptr, int32_t subindex, double value,
     return NIRT_SetValueByDataType(ptr, subindex, value, 0, Complex);
 
    case 29:
-    //Type is matrix. Call SetValueByDataType on its contained type
+    //Type is struct. Call SetValueByDataType on its contained type
     return NIRT_SetValueByDataType(ptr, subindex, value, 0, Complex);
 
    case 30:
+    //Type is struct. Call SetValueByDataType on its contained type
+    return NIRT_SetValueByDataType(ptr, subindex, value, 0, Complex);
+
+   case 31:
+    //Type is struct. Call SetValueByDataType on its contained type
+    return NIRT_SetValueByDataType(ptr, subindex, value, 0, Complex);
+
+   case 32:
+    //Type is matrix. Call SetValueByDataType on its contained type
+    return NIRT_SetValueByDataType(ptr, subindex, value, 0, Complex);
+
+   case 33:
     //Type is matrix. Call SetValueByDataType on its contained type
     return NIRT_SetValueByDataType(ptr, subindex, value, 0, Complex);
   }
@@ -1088,7 +1115,7 @@ void SetExternalInputs(double* data, int_T* TaskSampleHit)
   }
 
   // CSE1_HIL_u/u/u_VSP2
-  if (TaskSampleHit[1]) {
+  if (TaskSampleHit[0]) {
     NIRT_SetValueByDataType(&CSE1_HIL_u_B.u_VSP2, 0, data[index++], 0, 0);
   } else {
     index += 1;
@@ -1102,7 +1129,7 @@ void SetExternalInputs(double* data, int_T* TaskSampleHit)
   }
 
   // CSE1_HIL_u/u/alpha_VSP2
-  if (TaskSampleHit[1]) {
+  if (TaskSampleHit[0]) {
     NIRT_SetValueByDataType(&CSE1_HIL_u_B.alpha_VSP2, 0, data[index++], 0, 0);
   } else {
     index += 1;
@@ -1153,10 +1180,10 @@ int32_t NumInputPorts(void)
 
 int32_t NumOutputPorts(void)
 {
-  return 12;
+  return 16;
 }
 
-double ni_extout[12];
+double ni_extout[16];
 
 /*========================================================================*
  * Function: SetExternalOutputs
@@ -1244,6 +1271,35 @@ void SetExternalOutputs(double* data, int_T* TaskSampleHit)
     index += 1;
   }
 
+  // CSE1_HIL_u/nu_dot/zeroout: Virtual Signal # 0
+  if (TaskSampleHit[1]) {              // sample and hold
+    ni_extout[index++] = NIRT_GetValueByDataType(&CSE1_HIL_u_P.Constant_Value, 0,
+      0, 0);
+  } else {
+    index += 1;
+  }
+
+  // CSE1_HIL_u/nu_dot/r_dot1: Virtual Signal # 0
+  if (TaskSampleHit[0]) {              // sample and hold
+    ni_extout[index++] = NIRT_GetValueByDataType(&CSE1_HIL_u_B.nu_dot, 2, 18, 0);
+  } else {
+    index += 1;
+  }
+
+  // CSE1_HIL_u/nu_dot/u_dot1: Virtual Signal # 0
+  if (TaskSampleHit[0]) {              // sample and hold
+    ni_extout[index++] = NIRT_GetValueByDataType(&CSE1_HIL_u_B.nu_dot, 0, 18, 0);
+  } else {
+    index += 1;
+  }
+
+  // CSE1_HIL_u/nu_dot/v_dot1: Virtual Signal # 0
+  if (TaskSampleHit[0]) {              // sample and hold
+    ni_extout[index++] = NIRT_GetValueByDataType(&CSE1_HIL_u_B.nu_dot, 1, 18, 0);
+  } else {
+    index += 1;
+  }
+
   // CSE1_HIL_u/tau/X: Virtual Signal # 0
   if (TaskSampleHit[0]) {              // sample and hold
     ni_extout[index++] = NIRT_GetValueByDataType(&CSE1_HIL_u_B.X, 0, 0, 0);
@@ -1314,6 +1370,19 @@ int32_t NI_InitExternalOutputs()
   // CSE1_HIL_u/nu_dot/v_dot: Virtual Signal # 0
   ni_extout[index++] = NIRT_GetValueByDataType(&CSE1_HIL_u_B.nu_dot, 1, 18, 0);
 
+  // CSE1_HIL_u/nu_dot/zeroout: Virtual Signal # 0
+  ni_extout[index++] = NIRT_GetValueByDataType(&CSE1_HIL_u_P.Constant_Value, 0,
+    0, 0);
+
+  // CSE1_HIL_u/nu_dot/r_dot1: Virtual Signal # 0
+  ni_extout[index++] = NIRT_GetValueByDataType(&CSE1_HIL_u_B.nu_dot, 2, 18, 0);
+
+  // CSE1_HIL_u/nu_dot/u_dot1: Virtual Signal # 0
+  ni_extout[index++] = NIRT_GetValueByDataType(&CSE1_HIL_u_B.nu_dot, 0, 18, 0);
+
+  // CSE1_HIL_u/nu_dot/v_dot1: Virtual Signal # 0
+  ni_extout[index++] = NIRT_GetValueByDataType(&CSE1_HIL_u_B.nu_dot, 1, 18, 0);
+
   // CSE1_HIL_u/tau/X: Virtual Signal # 0
   ni_extout[index++] = NIRT_GetValueByDataType(&CSE1_HIL_u_B.X, 0, 0, 0);
 
@@ -1334,26 +1403,30 @@ int32_t NI_InitExternalOutputs()
 /* All elements by default (including scalars) have 2 dimensions [1,1] */
 static NI_Parameter NI_ParamList[] DataSection(".NIVS.paramlist") =
 {
-  { 0, "cse1_hil_u/eta_0/Memory3/X0", offsetof(P_CSE1_HIL_u_T, Memory3_X0), 29,
+  { 0, "cse1_hil_u/eta_0/Memory3/X0", offsetof(P_CSE1_HIL_u_T, Memory3_X0), 32,
     1, 2, 0, 0 },
 
-  { 1, "cse1_hil_u/eta_0/Memory4/X0", offsetof(P_CSE1_HIL_u_T, Memory4_X0), 29,
+  { 1, "cse1_hil_u/eta_0/Memory4/X0", offsetof(P_CSE1_HIL_u_T, Memory4_X0), 32,
     1, 2, 2, 0 },
 
-  { 2, "cse1_hil_u/eta_0/Memory5/X0", offsetof(P_CSE1_HIL_u_T, Memory5_X0), 29,
+  { 2, "cse1_hil_u/eta_0/Memory5/X0", offsetof(P_CSE1_HIL_u_T, Memory5_X0), 32,
     1, 2, 4, 0 },
 
   { 3, "cse1_hil_u/Velocity/InitialCondition", offsetof(P_CSE1_HIL_u_T,
-    Velocity_IC), 20, 3, 2, 6, 0 },
+    Velocity_IC), 22, 3, 2, 6, 0 },
+
+  { 4, "cse1_hil_u/nu_dot/Constant/Value", offsetof(P_CSE1_HIL_u_T,
+    Constant_Value), 32, 1, 2, 8, 0 },
 };
 
-static int32_t NI_ParamListSize DataSection(".NIVS.paramlistsize") = 4;
+static int32_t NI_ParamListSize DataSection(".NIVS.paramlistsize") = 5;
 static int32_t NI_ParamDimList[] DataSection(".NIVS.paramdimlist") =
 {
   1, 1,                                /* Parameter at index 0 */
   1, 1,                                /* Parameter at index 1 */
   1, 1,                                /* Parameter at index 2 */
   3, 1,                                /* Parameter at index 3 */
+  1, 1,                                /* Parameter at index 4 */
 };
 
 static NI_Signal NI_SigList[] DataSection(".NIVS.siglist") =
@@ -1445,16 +1518,32 @@ static NI_Signal NI_SigList[] DataSection(".NIVS.siglist") =
   { 28, "cse1_hil_u/T Thruster configuration matrix", 2, "", offsetof
     (B_CSE1_HIL_u_T, N) + (0*sizeof(real_T)), BLOCKIO_SIG, 0, 1, 2, 0, 0 },
 
+  { 29, "cse1_hil_u/B Command to force mapping/VSP1", 0, "", offsetof
+    (B_CSE1_HIL_u_T, sf_VSP1.F_x) + (0*sizeof(real_T)), BLOCKIO_SIG, 0, 1, 2, 0,
+    0 },
+
+  { 30, "cse1_hil_u/B Command to force mapping/VSP1", 1, "", offsetof
+    (B_CSE1_HIL_u_T, sf_VSP1.F_y) + (0*sizeof(real_T)), BLOCKIO_SIG, 0, 1, 2, 0,
+    0 },
+
+  { 31, "cse1_hil_u/B Command to force mapping/VSP", 0, "", offsetof
+    (B_CSE1_HIL_u_T, sf_VSP.F_x) + (0*sizeof(real_T)), BLOCKIO_SIG, 0, 1, 2, 0,
+    0 },
+
+  { 32, "cse1_hil_u/B Command to force mapping/VSP", 1, "", offsetof
+    (B_CSE1_HIL_u_T, sf_VSP.F_y) + (0*sizeof(real_T)), BLOCKIO_SIG, 0, 1, 2, 0,
+    0 },
+
   { -1, "", -1, "", 0, 0, 0 }
 };
 
-static int32_t NI_SigListSize DataSection(".NIVS.siglistsize") = 29;
+static int32_t NI_SigListSize DataSection(".NIVS.siglistsize") = 33;
 static int32_t NI_VirtualBlockSources[1];
 static int32_t NI_SigDimList[] DataSection(".NIVS.sigdimlist") =
 { 1, 1
 };
 
-static int32_t NI_ExtListSize DataSection(".NIVS.extlistsize") = 23;
+static int32_t NI_ExtListSize DataSection(".NIVS.extlistsize") = 27;
 static NI_ExternalIO NI_ExtList[] DataSection(".NIVS.extlist") =
 {
   { 1, "integrator_reset", 0, EXT_IN, 1, 1, 1 },
@@ -1463,11 +1552,11 @@ static NI_ExternalIO NI_ExtList[] DataSection(".NIVS.extlist") =
 
   { 3, "u/u_VSP1", 0, EXT_IN, 1, 1, 1 },
 
-  { 4, "u/u_VSP2", 1, EXT_IN, 1, 1, 1 },
+  { 4, "u/u_VSP2", 0, EXT_IN, 1, 1, 1 },
 
   { 5, "u/alpha_VSP1", 0, EXT_IN, 1, 1, 1 },
 
-  { 6, "u/alpha_VSP2", 1, EXT_IN, 1, 1, 1 },
+  { 6, "u/alpha_VSP2", 0, EXT_IN, 1, 1, 1 },
 
   { 7, "u/omega_VSP1", 1, EXT_IN, 1, 1, 1 },
 
@@ -1497,11 +1586,19 @@ static NI_ExternalIO NI_ExtList[] DataSection(".NIVS.extlist") =
 
   { 9, "nu_dot/v_dot", 0, EXT_OUT, 1, 1, 1 },
 
-  { 10, "tau/X", 0, EXT_OUT, 1, 1, 1 },
+  { 10, "nu_dot/zeroout", 1, EXT_OUT, 1, 1, 1 },
 
-  { 11, "tau/Y", 0, EXT_OUT, 1, 1, 1 },
+  { 11, "nu_dot/r_dot1", 0, EXT_OUT, 1, 1, 1 },
 
-  { 12, "tau/N", 0, EXT_OUT, 1, 1, 1 },
+  { 12, "nu_dot/u_dot1", 0, EXT_OUT, 1, 1, 1 },
+
+  { 13, "nu_dot/v_dot1", 0, EXT_OUT, 1, 1, 1 },
+
+  { 14, "tau/X", 0, EXT_OUT, 1, 1, 1 },
+
+  { 15, "tau/Y", 0, EXT_OUT, 1, 1, 1 },
+
+  { 16, "tau/N", 0, EXT_OUT, 1, 1, 1 },
 
   { -1, "", 0, 0, 0, 0, 0 }
 };
@@ -1519,8 +1616,8 @@ NI_Task NI_TaskList[] DataSection(".NIVS.tasklist") =
 int32_t NI_NumTasks DataSection(".NIVS.numtasks") = 1;
 static const char* NI_CompiledModelName DataSection(".NIVS.compiledmodelname") =
   "CSE1_HIL_u";
-static const char* NI_CompiledModelVersion = "1.32";
-static const char* NI_CompiledModelDateTime = "Mon Jan 29 10:16:45 2018";
+static const char* NI_CompiledModelVersion = "1.38";
+static const char* NI_CompiledModelDateTime = "Mon Feb 12 13:52:09 2018";
 static const char* NI_builder DataSection(".NIVS.builder") =
   "NI Model Framework 2017.0.0.143 (2017) for Simulink Coder 8.11 (R2016b)";
 static const char* NI_BuilderVersion DataSection(".NIVS.builderversion") =
@@ -2331,7 +2428,7 @@ DLL_EXPORT int32_t NIRT_GetSimState(int32_t* numContStates, char
        NULL)) {
     if (*numContStates < 0 || *numDiscStates < 0 || *numClockTicks < 0) {
       *numContStates = 6;
-      *numDiscStates = 279;
+      *numDiscStates = 327;
       *numClockTicks = NUMST - TID01EQ;
       return NI_OK;
     }
@@ -2419,6 +2516,18 @@ DLL_EXPORT int32_t NIRT_GetSimState(int32_t* numContStates, char
     discStates[idx] = NIRT_GetValueByDataType(&CSE1_HIL_u_DW.v_dot_DWORK1, 0, 0,
       0);
     strcpy(discStatesNames + (idx++ * 100), "&CSE1_HIL_u_DW.v_dot_DWORK1");
+    discStates[idx] = NIRT_GetValueByDataType(&CSE1_HIL_u_DW.zeroout_DWORK1, 0,
+      0, 0);
+    strcpy(discStatesNames + (idx++ * 100), "&CSE1_HIL_u_DW.zeroout_DWORK1");
+    discStates[idx] = NIRT_GetValueByDataType(&CSE1_HIL_u_DW.r_dot1_DWORK1, 0, 0,
+      0);
+    strcpy(discStatesNames + (idx++ * 100), "&CSE1_HIL_u_DW.r_dot1_DWORK1");
+    discStates[idx] = NIRT_GetValueByDataType(&CSE1_HIL_u_DW.u_dot1_DWORK1, 0, 0,
+      0);
+    strcpy(discStatesNames + (idx++ * 100), "&CSE1_HIL_u_DW.u_dot1_DWORK1");
+    discStates[idx] = NIRT_GetValueByDataType(&CSE1_HIL_u_DW.v_dot1_DWORK1, 0, 0,
+      0);
+    strcpy(discStatesNames + (idx++ * 100), "&CSE1_HIL_u_DW.v_dot1_DWORK1");
     discStates[idx] = NIRT_GetValueByDataType(&CSE1_HIL_u_DW.X_DWORK1, 0, 0, 0);
     strcpy(discStatesNames + (idx++ * 100), "&CSE1_HIL_u_DW.X_DWORK1");
     discStates[idx] = NIRT_GetValueByDataType(&CSE1_HIL_u_DW.Y_DWORK1, 0, 0, 0);
@@ -2536,6 +2645,30 @@ DLL_EXPORT int32_t NIRT_GetSimState(int32_t* numContStates, char
     }
 
     for (count = 0; count < 11; count++) {
+      discStates[idx] = NIRT_GetValueByDataType(&CSE1_HIL_u_DW.zeroout_DWORK2,
+        count, 19, 0);
+      strcpy(discStatesNames + (idx++ * 100), "&CSE1_HIL_u_DW.zeroout_DWORK2");
+    }
+
+    for (count = 0; count < 11; count++) {
+      discStates[idx] = NIRT_GetValueByDataType(&CSE1_HIL_u_DW.r_dot1_DWORK2,
+        count, 19, 0);
+      strcpy(discStatesNames + (idx++ * 100), "&CSE1_HIL_u_DW.r_dot1_DWORK2");
+    }
+
+    for (count = 0; count < 11; count++) {
+      discStates[idx] = NIRT_GetValueByDataType(&CSE1_HIL_u_DW.u_dot1_DWORK2,
+        count, 19, 0);
+      strcpy(discStatesNames + (idx++ * 100), "&CSE1_HIL_u_DW.u_dot1_DWORK2");
+    }
+
+    for (count = 0; count < 11; count++) {
+      discStates[idx] = NIRT_GetValueByDataType(&CSE1_HIL_u_DW.v_dot1_DWORK2,
+        count, 19, 0);
+      strcpy(discStatesNames + (idx++ * 100), "&CSE1_HIL_u_DW.v_dot1_DWORK2");
+    }
+
+    for (count = 0; count < 11; count++) {
       discStates[idx] = NIRT_GetValueByDataType(&CSE1_HIL_u_DW.X_DWORK2, count,
         19, 0);
       strcpy(discStatesNames + (idx++ * 100), "&CSE1_HIL_u_DW.X_DWORK2");
@@ -2646,6 +2779,14 @@ DLL_EXPORT int32_t NIRT_SetSimState(double* contStates, double* discStates,
       0);
     NIRT_SetValueByDataType(&CSE1_HIL_u_DW.v_dot_DWORK1, 0, discStates[idx++], 0,
       0);
+    NIRT_SetValueByDataType(&CSE1_HIL_u_DW.zeroout_DWORK1, 0, discStates[idx++],
+      0, 0);
+    NIRT_SetValueByDataType(&CSE1_HIL_u_DW.r_dot1_DWORK1, 0, discStates[idx++],
+      0, 0);
+    NIRT_SetValueByDataType(&CSE1_HIL_u_DW.u_dot1_DWORK1, 0, discStates[idx++],
+      0, 0);
+    NIRT_SetValueByDataType(&CSE1_HIL_u_DW.v_dot1_DWORK1, 0, discStates[idx++],
+      0, 0);
     NIRT_SetValueByDataType(&CSE1_HIL_u_DW.X_DWORK1, 0, discStates[idx++], 0, 0);
     NIRT_SetValueByDataType(&CSE1_HIL_u_DW.Y_DWORK1, 0, discStates[idx++], 0, 0);
     NIRT_SetValueByDataType(&CSE1_HIL_u_DW.N_DWORK1, 0, discStates[idx++], 0, 0);
@@ -2738,6 +2879,26 @@ DLL_EXPORT int32_t NIRT_SetSimState(double* contStates, double* discStates,
     for (count = 0; count < 11; count++) {
       NIRT_SetValueByDataType(&CSE1_HIL_u_DW.v_dot_DWORK2, count, discStates[idx
         ++], 19, 0);
+    }
+
+    for (count = 0; count < 11; count++) {
+      NIRT_SetValueByDataType(&CSE1_HIL_u_DW.zeroout_DWORK2, count,
+        discStates[idx++], 19, 0);
+    }
+
+    for (count = 0; count < 11; count++) {
+      NIRT_SetValueByDataType(&CSE1_HIL_u_DW.r_dot1_DWORK2, count,
+        discStates[idx++], 19, 0);
+    }
+
+    for (count = 0; count < 11; count++) {
+      NIRT_SetValueByDataType(&CSE1_HIL_u_DW.u_dot1_DWORK2, count,
+        discStates[idx++], 19, 0);
+    }
+
+    for (count = 0; count < 11; count++) {
+      NIRT_SetValueByDataType(&CSE1_HIL_u_DW.v_dot1_DWORK2, count,
+        discStates[idx++], 19, 0);
     }
 
     for (count = 0; count < 11; count++) {

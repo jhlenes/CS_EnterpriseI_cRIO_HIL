@@ -7,9 +7,9 @@
  *
  * Code generation for model "CSE1_HIL_u".
  *
- * Model version              : 1.32
+ * Model version              : 1.38
  * Simulink Coder version : 8.11 (R2016b) 25-Aug-2016
- * C source code generated on : Mon Jan 29 10:16:45 2018
+ * C source code generated on : Mon Feb 12 13:52:10 2018
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -24,6 +24,10 @@
 #include "builtin_typeid_types.h"
 #include "multiword_types.h"
 #include "zero_crossing_types.h"
+#include "CSE1_HIL_u.h"
+
+extern void CSE1_HIL_u_VSP(real_T rtu_alpha, real_T rtu_u_VSP,
+  B_VSP_CSE1_HIL_u_T *localB);
 
 /* private model entry point functions */
 extern void CSE1_HIL_u_derivatives(void);
